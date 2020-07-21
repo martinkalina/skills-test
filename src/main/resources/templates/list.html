@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th> Bank Name </th>
+        <th> Bank Code </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${banks.empty}">
+        <td colspan="2"> No Data Available </td>
+    </tr>
+    <tr th:each="bank : ${banks}">
+        <td><span th:text="${bank.bankName}"> Title </span></td>
+        <td><span th:text="${bank.bankCode}"> Author </span></td>
+    </tr>
+    </tbody>
+</table>
+<form action="#" th:action="@{/}" th:object="${banks}" method="post">
+    <p><input type="submit" value="Save to DB" /></p>
+</form>
+</body>
