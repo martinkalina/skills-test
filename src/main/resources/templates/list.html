@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Serving Web Content</title>
+    <title>BellaDati skills test app</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
@@ -25,4 +25,5 @@
 <form action="#" th:action="@{/}" th:object="${banks}" method="post">
     <p><input type="submit" value="Save to DB" /></p>
 </form>
+<div th:if="${showPopup}"><script>window.alert('Data saved to DB')</script></div>
 </body>

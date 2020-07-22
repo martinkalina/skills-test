@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service
 
 
 @Service
-
 class DataLoadService(
 
         @Value("\${belladati.key}") key: String,
